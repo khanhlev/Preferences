@@ -2,6 +2,7 @@ package com.example.preferences;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,12 +16,21 @@ public class MainActivity extends AppCompatActivity {
     EditText edtUsername, edtPass;
     CheckBox cbRemember;
 
+    SharedPreferences sharedPreferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Anhxa();
+        sharedPreferences = getSharedPreferences("dataLogin",MODE_PRIVATE);
+
+        //Lấy giá trị
+        edtUsername.setText((sharedPreferences.getString("taikhoan", "")));
+        edtPass.setText(sharedPreferences.getString("matkhau",""));
+        cbRemember.setChecked(sharedPreferences.getBoolean("checked", false));
+
+
 
         btnSignin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +40,20 @@ public class MainActivity extends AppCompatActivity {
 
                 if(username.equals("khanhle")&& password.equals("1234")){
                     Toast.makeText(MainActivity.this, "Đăng nhập thành công.", Toast.LENGTH_SHORT).show();
+                    //Nếu có check
+                    if(cbRemember.isChecked()){
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("taikhoan",username);
+                        editor.putString("matkhau", password);
+                        editor.putBoolean("chechked",true);
+                        editor.commit();
+                    }else{
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.remove("taikhoan");
+                        editor.remove("matkhau");
+                        editor.remove("checked");
+                        editor.commit();
+                    }
                 }else{
                     Toast.makeText(MainActivity.this, "Lỗi đăng nhập!", Toast.LENGTH_SHORT).show();
                 }
