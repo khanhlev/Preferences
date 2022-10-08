@@ -1,4 +1,4 @@
-package com.example.preferences;
+package com.example.list;
 
 import org.junit.Test;
 

@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/LTDD/LT_LTDD/Tuan4/Bai1/app/src/main/res/drawable/grad.xml" value="0.18" />
-        <entry key="..\:/LTDD/LT_LTDD/Tuan4/Bai1/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/LTDD/LT_LTDD/Tuan5/List/List/app/src/main/res/layout/activity_detail.xml" value="0.24635416666666668" />
+        <entry key="..\:/LTDD/LT_LTDD/Tuan5/List/List/app/src/main/res/layout/activity_home.xml" value="0.24635416666666668" />
+        <entry key="..\:/LTDD/LT_LTDD/Tuan5/List/List/app/src/main/res/layout/activity_login.xml" value="0.24635416666666668" />
+        <entry key="..\:/LTDD/LT_LTDD/Tuan5/List/List/app/src/main/res/layout/activity_main.xml" value="0.24635416666666668" />
+        <entry key="..\:/LTDD/LT_LTDD/Tuan5/List/List/app/src/main/res/layout/activity_profile.xml" value="0.24635416666666668" />
+        <entry key="..\:/LTDD/LT_LTDD/Tuan5/List/List/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
       </map>
     </option>
   </component>
