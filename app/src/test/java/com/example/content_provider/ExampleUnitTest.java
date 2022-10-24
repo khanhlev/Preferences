@@ -1,4 +1,4 @@
-package com.example.preferences;
+package com.example.content_provider;
 
 import org.junit.Test;
 
